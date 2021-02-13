@@ -1,0 +1,442 @@
+/* ---------------------------------------
+variable
+------------------------------------------ */
+/* ---------------------------------------
+mixins
+------------------------------------------ */
+/* ---------------------------------------
+animation
+------------------------------------------ */
+/* ----------------------------------------
+Animations de la page Accueil
+-------------------------------------------*/
+.animation div {
+  animation: anim-entete 1s 1s both cubic-bezier(0, 1.08, 1, 1.17);
+  /* forwards preserve son etat final*/
+  /*bacwards*/
+}
+
+@keyframes anim-entete {
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes anim-section {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*
+.animation div:nth-of-type(1){
+    animation-delay: 1s;
+}
+
+.animation div:nth-of-type(2){
+    animation-delay: 1.5s;
+}
+
+.animation div:nth-of-type(3){
+    animation-delay: 2s;
+}
+
+.animation div:nth-of-type(4){
+    animation-delay: 2.5s;
+}
+
+.animation div:nth-of-type(5){
+    animation-delay: 3s;
+}
+*/
+.animation div:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.animation div:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.animation div:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+.animation div:nth-of-type(4) {
+  animation-delay: 2s;
+}
+
+.animation div:nth-of-type(5) {
+  animation-delay: 2.5s;
+}
+
+/* ----------------------------------------
+Animations de la page .principal
+-------------------------------------------*/
+/*
+.principal h3:nth-of-type(1){
+    animation: anim-1 1s both .5s;
+}
+
+.principal h3:nth-of-type(2){
+    animation: anim-2 1s both 1s;
+}
+
+.principal h3:nth-of-type(3){
+    animation: anim-3 1s both 1.5s;
+}
+
+.principal h3:nth-of-type(4){
+    animation: anim-4 1s both 2s;
+}
+
+.principal h3:nth-of-type(5){
+    animation: anim-5 1s both 2.5s;
+}
+*/
+.principal h3:nth-of-type(1) {
+  animation: anim-1 1s both 0.5s;
+}
+
+.principal h3:nth-of-type(2) {
+  animation: anim-2 1s both 1s;
+}
+
+.principal h3:nth-of-type(3) {
+  animation: anim-3 1s both 1.5s;
+}
+
+.principal h3:nth-of-type(4) {
+  animation: anim-4 1s both 2s;
+}
+
+.principal h3:nth-of-type(5) {
+  animation: anim-5 1s both 2.5s;
+}
+
+/*
+@function couleur($propriete){
+    @return map-get($couleurs, $propriete);
+}
+*/
+@keyframes anim-1 {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-2 {
+  0% {
+    transform: translateY(-600px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-3 {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-4 {
+  0% {
+    transform: translateY(600px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-5 {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/*
+
+@keyframes anim-1{
+    0%{transform: translateY(-500px);}
+    100%{transform:translate(0);}
+}
+
+@keyframes anim-2{
+    0%{transform: translateY(-600px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes anim-3{
+    0%{transform: translateX(-500px);}
+    100%{transform:translate(0);}
+}
+
+@keyframes anim-4{
+    0%{transform: translateY(600px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes anim-5{
+    0%{transform: translateY(500px);}
+    100%{transform:translateY(0);}
+}
+
+*/
+/* ---------------------------------------
+layout
+------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background: url(../images/fond4.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+body::after {
+  content: "";
+  background-color: #4ac1c5;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-position: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #2e8fce;
+}
+
+@media (min-width: 1000px) {
+  body::after {
+    clip-path: polygon(21% 0, 35% 50%, 21% 100%, 0% 100%, 0 49%, 0% 0%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #2e8fce;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: .8rem;
+}
+
+h6 {
+  font-size: .7rem;
+}
+
+p {
+  font-size: .6rem;
+}
+
+.bloc {
+  background-color: transparent;
+  color: white;
+  font-size: 3rem;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.bloc img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+@media (min-width: 1000px) {
+  .bloc img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.grille {
+  display: grid;
+  /* avant width:80%;*/
+  width: 100%;
+  margin: 0 auto;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* MOBILE FIRST*/
+  grid-template-areas: "entete entete entete" "menu menu menu" "annonce1 annonce1 annonce1" "principal principal principal" "pied-page pied-page pied-page";
+}
+
+@media (min-width: 1000px) {
+  .grille {
+    grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
+  }
+}
+
+.entete {
+  grid-area: entete;
+  background-color: rgba(22, 223, 223, 0.356);
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.annonce1 {
+  grid-area: annonce1;
+}
+
+.principal {
+  grid-area: principal;
+}
+
+.pied-page {
+  grid-area: pied-page;
+  font-size: 1.5rem;
+  background-color: #100358;
+  color: white;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  .pied-page {
+    font-size: 1rem;
+    background-color: #100358;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    align-items: center;
+  }
+}
+
+.entete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.entete h1 {
+  font-size: clamp(0.9rem, -0.875rem + 8.333vw, 4rem);
+}
+
+.entete section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.entete section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #5dfdb2;
+  font-size: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .entete section div {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 3rem;
+  }
+}
+
+.annonce1 {
+  grid-area: annonce1;
+  background-color: rgba(22, 223, 223, 0.356);
+  color: #040550;
+  border-radius: 50px;
+  box-shadow: 7px 3px 11px 4px #757472;
+  padding: 42px;
+  margin: 20px;
+}
+
+.annonce1 div {
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+}
+
+.annonce1 div img {
+  justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .annonce1 div {
+    font-size: 1rem;
+  }
+}
+
+.annonce2 {
+  padding: 42px;
+  margin: 20px;
+  background-color: #efebc5;
+  color: #1c2127;
+  grid-area: annonce2;
+}
+
+.annonce2 section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal h3 {
+  padding: 1rem 0 1rem 0;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
