@@ -8,11 +8,12 @@ body {
     height : 100vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
+    
    
 
     @include desktop{
        
-       background: url(../images/fond4.jpg)no-repeat;
+       background:url("images/fond4.jpg")no-repeat;
         background-size: cover;
 
     }
@@ -34,6 +35,7 @@ body::after {
     right : 0;
     z-index: -1;
     background-color:#2e8fce;
+    
     @include desktop{
       
       clip-path: polygon(21% 0, 35% 50%, 21% 100%, 0% 100%, 0 49%, 0% 0%);
@@ -58,8 +60,6 @@ p {
 .bloc {
    // border : 1px solid #666;
     background-color:transparent;
-    //color:#2a85b7;
-  
     color: white;
     font-size: 3rem;
     margin-left : 0;
@@ -181,8 +181,7 @@ p {
        width: 25px;
        height: 25px;
        border-radius: 50%;
-       //background-color:rgb(209, 96, 185);
-      background-color: rgb(93, 253, 178);
+       background-color: rgb(93, 253, 178);
       //font-size:.2rem;
       font-size:1rem;
 
@@ -194,20 +193,14 @@ p {
        
       }
     }
-    
-
-    
 
     }
 }
 
 .annonce1{
     grid-area: annonce1;
-    //background-color: #efebc5;
     background-color: rgba(22, 223, 223, 0.356);
-    //color: #5e6e81;
     color: rgb(4, 5, 80);
-    //border-radius: 10px;
     border-radius: 50px;
     box-shadow: 7px 3px 11px 4px #757472;
     padding: 42px;
@@ -249,11 +242,16 @@ p {
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    background-color:#2e8fce;
     
     h3{
         padding: 1rem 0 1rem 0;
-        
         color:white;
+    }
+
+
+    @include desktop{
+        background-color:transparent;    
     }
         
 }
